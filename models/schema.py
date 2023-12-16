@@ -1,23 +1,24 @@
-from typing import List, Optional
-from pydantic import BaseModel, Field
-from pydantic_core import Url
+from typing import Optional
+from pydantic import BaseModel
 
-from models.database import PyObjectId
-from models.node import BitModel
 
 class DeleteBitModel(BaseModel):
-    node_id: Optional[str] = None
-    bit_id: Optional[str] = None
+    '''Model for deleting a bit'''
+    node_id: str
+    bit_id: str
 
 class UpdateBitModel(BaseModel):
+    '''Model for deleting a bit'''
     title: Optional[str]
     description: Optional[str]
     url: Optional[str]
 
 class UpdateNodeModel(BaseModel):
+    '''Model for deleting a bit'''
     name: Optional[str]
     description: Optional[str]
-    parent: Optional[PyObjectId]
 
 class DeleteNodeModel(BaseModel):
+    '''Model for deleting a bit'''
     node_id:str
+    
