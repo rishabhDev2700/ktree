@@ -1,4 +1,3 @@
-from ast import alias
 from bson import ObjectId
 from fastapi import APIRouter, Body, HTTPException
 from models.database import db
