@@ -7,8 +7,8 @@ from jose import JWTError, jwt
 from passlib.context import CryptContext
 from models.token import TokenData
 from models.database import db
-from config.settings import get_settings
 from models.user import UserModel
+from config.settings import get_settings
 
 settings = get_settings()
 ALGORITHM = "HS256"
