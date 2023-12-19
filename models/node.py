@@ -6,7 +6,7 @@ from models.database import PyObjectId
 
 
 class BitModel(BaseModel):
-    '''Bit model for validating bits'''
+    """The Bit model for validating bits"""
     id: Optional[PyObjectId] = Field(alias="_id", default=None)
     title: str = Field(...)
     description: str = Field(...)
@@ -14,7 +14,7 @@ class BitModel(BaseModel):
 
 
 class NodeModel(BaseModel):
-    '''Node model for validating node data'''
+    """Node model for validating node data"""
     id: Optional[PyObjectId] = Field(alias="_id", default=None)
     owner: Optional[PyObjectId] = Field(alias="owner")
     name: str = Field(...)
@@ -24,6 +24,6 @@ class NodeModel(BaseModel):
 
 
 class NodeCollection(BaseModel):
-    '''Model for returning a list of nodes'''
+    """Model for returning a list of nodes"""
     nodes:List[NodeModel]
     
